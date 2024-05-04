@@ -185,8 +185,12 @@ func _get_item_cursor_icon(item: Item) -> Texture2D:
 #	to indicate that item is getting moved
 	const CURSOR_ICON_SCALE: float = 0.80
 
+#	NOTE: need screen_scale to handle hiDPI screens. In all other cases, screen scale is equal to 1.
+	var screen_id: int = DisplayServer.window_get_current_screen()
+	var screen_scale: float = DisplayServer.screen_get_scale(screen_id)
+	
 	var viewport_scale: Vector2 = get_viewport().get_final_transform().get_scale()
-	var cursor_icon_size: Vector2i = Vector2i(ITEM_BUTTON_SIZE * viewport_scale * CURSOR_ICON_SCALE)
+	var cursor_icon_size: Vector2i = Vector2i(ITEM_BUTTON_SIZE * viewport_scale / screen_scale * CURSOR_ICON_SCALE)
 	var item_icon_size: Vector2i = Vector2i(cursor_icon_size * ITEM_ICON_SCALE)
 
 	var rarity: Rarity.enm = item.get_rarity()
