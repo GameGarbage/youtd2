@@ -1,12 +1,10 @@
-[gd_resource type="Theme" load_steps=98 format=3 uid="uid://bql5sxaowafw3"]
+[gd_resource type="Theme" load_steps=93 format=3 uid="uid://bql5sxaowafw3"]
 
-[ext_resource type="FontFile" uid="uid://d1pnwehsosppo" path="res://assets/fonts/Friz Quadrata Std Medium.otf" id="1"]
 [ext_resource type="StyleBox" uid="uid://vnjg5mo0nmg" path="res://resources/theme/common/rect_container_l.tres" id="1_7apqd"]
 [ext_resource type="StyleBox" uid="uid://11b5t8jsfbdk" path="res://resources/theme/tower_actions/button_disabled.tres" id="1_vdqn7"]
 [ext_resource type="StyleBox" uid="uid://ceml4iosll1ur" path="res://resources/theme/unit_button/button_hover.tres" id="1_xn0v5"]
 [ext_resource type="StyleBox" uid="uid://cp7fygn5qoudb" path="res://resources/theme/tower_actions/button_pressed.tres" id="2_1ucqc"]
 [ext_resource type="StyleBox" uid="uid://crr0tkfd2ggb8" path="res://resources/theme/common/rect_container_center_l.tres" id="2_4l726"]
-[ext_resource type="Texture2D" uid="uid://h5ppp14fvtrd" path="res://assets/hud/horadric_cube.png" id="2_uaxwg"]
 [ext_resource type="StyleBox" uid="uid://6go01ssqkmws" path="res://resources/theme/tower_actions/button_normal.tres" id="3_o7vtc"]
 [ext_resource type="StyleBox" uid="uid://b8m81drahps4x" path="res://resources/theme/unit_button/common_rarity_panel_container.tres" id="4_28e2h"]
 [ext_resource type="StyleBox" uid="uid://bw4wtqgmpri3j" path="res://resources/theme/player_resource_display/rect_container_center_l.tres" id="4_enpnq"]
@@ -14,15 +12,12 @@
 [ext_resource type="StyleBox" uid="uid://de41wrip7to2f" path="res://resources/theme/unit_button_container/counter_label_normal.tres" id="5_rng1l"]
 [ext_resource type="StyleBox" uid="uid://c4rv27uxbm00c" path="res://resources/theme/player_resource_display/stash_panel_background.tres" id="5_uofvg"]
 [ext_resource type="StyleBox" uid="uid://dvslmk5lro1u0" path="res://resources/theme/unit_button/rare_rarity_panel_container.tres" id="6_unpbn"]
-[ext_resource type="Texture2D" uid="uid://bxfq60uwqny4m" path="res://assets/hud/checkbox.png" id="7_0ykvr"]
 [ext_resource type="Texture2D" uid="uid://lu1adtr8xmdf" path="res://resources/ui_textures/rect_container_s.tres" id="7_7y0mp"]
 [ext_resource type="StyleBox" uid="uid://rhsusiehbqjb" path="res://resources/theme/unit_button/small_button_disabled.tres" id="7_mn43h"]
 [ext_resource type="StyleBox" uid="uid://bdt0si03bssd5" path="res://resources/theme/item_button_hover.tres" id="8_332gl"]
-[ext_resource type="Texture2D" uid="uid://dl22jvey8l5fo" path="res://assets/hud/hud_atlas.png" id="8_dlncl"]
 [ext_resource type="StyleBox" uid="uid://k235emid2ajj" path="res://resources/theme/unit_button/small_button_hover.tres" id="8_pql3q"]
 [ext_resource type="StyleBox" uid="uid://xj6rw0giypad" path="res://resources/theme/item_button_normal.tres" id="8_t77il"]
 [ext_resource type="StyleBox" uid="uid://carc5koied5gk" path="res://resources/theme/unit_button/small_button_normal.tres" id="9_xj4hs"]
-[ext_resource type="Texture2D" uid="uid://60qc7jcvckhh" path="res://assets/hud/misc3.png" id="10_7mhq7"]
 [ext_resource type="Texture2D" uid="uid://butcq5anduco8" path="res://resources/ui_textures/portal_lives_round_bg.tres" id="10_r42uk"]
 [ext_resource type="StyleBox" uid="uid://dqn63cj0ar4qv" path="res://resources/theme/unit_button/uncommon_rarity_panel_container.tres" id="12_klcgr"]
 [ext_resource type="StyleBox" uid="uid://b6c3y3hvg15qk" path="res://resources/theme/unit_button/unique_rarity_panel_container.tres" id="13_15oyb"]
@@ -74,11 +69,9 @@ content_margin_bottom = 2.0
 texture = ExtResource("7_7y0mp")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r2ior"]
-atlas = ExtResource("7_0ykvr")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1tbsw"]
-atlas = ExtResource("7_0ykvr")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_axp0f"]
@@ -94,7 +87,6 @@ region = Rect2(0, 0, 32, 32)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b7i3v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fjpfd"]
-atlas = ExtResource("8_dlncl")
 region = Rect2(790, 74, 48, 48)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_03gih"]
@@ -106,7 +98,6 @@ texture = SubResource("AtlasTexture_fjpfd")
 modulate_color = Color(0.466667, 0.466667, 0.466667, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wfurf"]
-atlas = ExtResource("8_dlncl")
 region = Rect2(790, 74, 48, 48)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ts633"]
@@ -117,7 +108,6 @@ content_margin_bottom = 2.0
 texture = SubResource("AtlasTexture_wfurf")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_us0y7"]
-atlas = ExtResource("8_dlncl")
 region = Rect2(790, 74, 48, 48)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eyvb8"]
@@ -148,7 +138,6 @@ texture = SubResource("AtlasTexture_wfurf")
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f8clf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o3xv5"]
-atlas = ExtResource("10_7mhq7")
 region = Rect2(640, 128, 128, 128)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c46h0"]
@@ -159,7 +148,6 @@ texture_margin_right = 5.0
 texture_margin_bottom = 5.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dldvb"]
-atlas = ExtResource("10_7mhq7")
 region = Rect2(640, 128, 128, 128)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wifc2"]
@@ -204,7 +192,6 @@ modulate_color = Color(0.784314, 0.784314, 0.784314, 1)
 texture = ExtResource("10_r42uk")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1v3kw"]
-atlas = ExtResource("8_dlncl")
 region = Rect2(853, 74, 48, 48)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6lvfq"]
@@ -394,18 +381,14 @@ modulate_color = Color(1, 1, 1, 0.72549)
 [sub_resource type="StyleBoxEmpty" id="11"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_88crg"]
-texture = ExtResource("2_uaxwg")
 modulate_color = Color(0.392157, 0.392157, 0.392157, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cge4u"]
-texture = ExtResource("2_uaxwg")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jahl7"]
-texture = ExtResource("2_uaxwg")
 modulate_color = Color(0.784314, 0.784314, 0.784314, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_52r8a"]
-texture = ExtResource("2_uaxwg")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_esyqb"]
 atlas = ExtResource("7_7y0mp")
@@ -419,7 +402,7 @@ texture_margin_bottom = 8.0
 region_rect = Rect2(853, 74, 48, 48)
 
 [sub_resource type="FontFile" id="1"]
-fallbacks = Array[Font]([ExtResource("1")])
+fallbacks = Array[Font]([null])
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
