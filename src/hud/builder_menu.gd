@@ -18,6 +18,7 @@ var _builder_id: int
 
 
 func _ready():
+	print_verbose("BuilderMenu is ready.")
 	var builder_list: Array = BuilderProperties.get_id_list()
 	
 	for builder in builder_list:

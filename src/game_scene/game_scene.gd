@@ -168,6 +168,7 @@ func _ready():
 		var builder_id: int = Config.autostart_builder_id()
 		_set_builder_for_local_player(builder_id)
 	else:
+		print_verbose("GameScene > BuilderMenu preload")
 		var builder_menu: BuilderMenu = preload("res://src/hud/builder_menu.tscn").instantiate()
 		builder_menu.finished.connect(_on_builder_menu_finished.bind(builder_menu))
 		
@@ -366,7 +367,7 @@ func _submit_chat_message():
 	var chat_action: Action = ActionChat.make(chat_message)
 	_game_client.add_action(chat_action)
 
-
+# Create an Action and add into game client
 func _set_builder_for_local_player(builder_id: int):
 	var action: Action = ActionSelectBuilder.make(builder_id)
 	_game_client.add_action(action)
@@ -658,15 +659,19 @@ func _on_player_requested_return_from_horadric_cube():
 		
 		_game_client.add_action(action)
 
-
+# Function handler on BuilderMenu finished event
 func _on_builder_menu_finished(builder_menu: BuilderMenu):
+	# get selected builder
 	var builder_id: int = builder_menu.get_builder_id()
+	# Detroy builder menu, shouldn't see it
 	builder_menu.queue_free()
+	# Create a action and set action into game client by builder id, TODO change function name _set_action_for_game_client(builder_id)
 	_set_builder_for_local_player(builder_id)
 
 #	NOTE: need to do action for wisdom upgrades after
 #	setting builders because some builders affect wisdom
 #	upgrades.
+# READING
 	var wisdom_upgrades: Dictionary = Settings.get_wisdom_upgrades()
 	var action: Action = ActionSelectWisdomUpgrades.make(wisdom_upgrades)
 	_game_client.add_action(action)

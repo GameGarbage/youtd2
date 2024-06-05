@@ -1,7 +1,6 @@
 class_name ActionSelectBuilder
 
-
-
+# Create new action
 static func make(builder_id_arg: int) -> Action:
 	var action: Action = Action.new({
 		Action.Field.TYPE: Action.Type.SELECT_BUILDER,
@@ -10,7 +9,7 @@ static func make(builder_id_arg: int) -> Action:
 
 	return action
 
-
+# Set builder id into player node
 static func execute(action: Dictionary, player: Player):
 	var builder_id: int = action[Action.Field.BUILDER_ID]
 	
