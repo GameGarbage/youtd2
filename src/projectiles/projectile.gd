@@ -103,11 +103,12 @@ func _ready():
 #########################
 ###       Public      ###
 #########################
-
+# Moving projectile mechanism
 func update(delta: float):
 	if _target_unit != null:
+# Update _target_post each time
 		_target_pos = _target_unit.get_position_wc3() + UNIT_Z_OFFSET
-
+	# _move_type is equal 1
 	match _move_type:
 		MoveType.NORMAL: _update_normal(delta)
 		MoveType.INTERPOLATED: _update_interpolated(delta)
@@ -336,7 +337,8 @@ func _update_interpolated(delta: float):
 	var progress_ratio: float = Utils.divide_safe(_interpolation_progress, travel_distance, 1.0)
 	progress_ratio = clampf(progress_ratio, 0.0, 1.0)
 	var old_position_2d: Vector2 = get_position_wc3_2d()
-		
+# interpolation make projectile move smoothly
+# https://dev.to/dsyncer/interpolation-and-bezier-curves-their-usage-in-animation-and-creation-of-smooth-transitions-f0
 	var new_pos: Vector3
 	if _bezier_is_enabled:
 		new_pos = _interpolation_start.bezier_interpolate(_bezier_control_1, _bezier_control_2, _target_pos, progress_ratio)
@@ -356,7 +358,7 @@ func _update_interpolated(delta: float):
 	_direction = rad_to_deg(move_vector.angle())
 
 	var reached_target: float = progress_ratio == 1.0
-
+	# Reaching target mechanism
 	if reached_target:
 #		NOTE: need to set _interpolation_is_stopped flag to
 #		true here so that we can detect if it got changed by
@@ -535,6 +537,7 @@ func _do_explosion_visual():
 	var projectile_pos: Vector3 = get_position_wc3()
 	var projectile_pos_canvas: Vector2 = VectorUtils.wc3_to_canvas(projectile_pos)
 	explosion.position = projectile_pos_canvas
+	# Question: Why we add object to world?
 	Utils.add_object_to_world(explosion)
 
 

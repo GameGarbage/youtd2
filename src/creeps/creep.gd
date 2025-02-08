@@ -41,7 +41,7 @@ var _height_change_speed: float = 0.0
 #########################
 ###     Built-in      ###
 #########################
-
+# Creating creep mechanism
 func _ready():
 	super()
 
@@ -78,7 +78,7 @@ func _ready():
 
 	death.connect(_on_death)
 
-
+# Moving mechanism
 func update(delta: float):
 	if !is_stunned():
 		_move(delta)
@@ -304,7 +304,7 @@ func _calculate_current_z_index() -> int:
 	else:
 		return 0
 
-
+# Moving mechanism
 func _move(delta):
 	var path_is_over: bool = _current_path_index >= _path.get_curve().get_point_count()
 	if path_is_over:

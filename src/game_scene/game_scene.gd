@@ -162,7 +162,7 @@ func _ready():
 			var item: Item = Item.make(item_id, player)
 			var item_stash: ItemContainer = player.get_item_stash()
 			item_stash.add_item(item)
-
+	# Builder menu display
 	var skip_builder_menu: bool = Config.autostart_game()
 	if skip_builder_menu:
 		var builder_id: int = Config.autostart_builder_id()
@@ -189,7 +189,7 @@ func _ready():
 			latency = GameHost.SINGLEPLAYER_ACTION_LATENCY
 		else:
 			latency = GameHost.MULTIPLAYER_ACTION_LATENCY
-		
+		 #Question: what reason add latency?
 		_game_host.setup(latency, player_list)
 	
 	_camera.position = _get_camera_origin_pos()
@@ -284,10 +284,13 @@ func _unhandled_input(event: InputEvent):
 #########################
 ###      Private      ###
 #########################
-
+#Question: Which function call start_game?
+#Answer: on start button press and timeout will trigger start game
+#Reading
 func _start_game():
+	print_verbose("GameScene > _start_game")
 	_game_start_timer.stop()
-
+	# to hide and show button wave status
 	EventBus.first_wave_started.emit()
 
 	var player_list: Array[Player] = PlayerManager.get_player_list()
@@ -671,9 +674,9 @@ func _on_builder_menu_finished(builder_menu: BuilderMenu):
 #	NOTE: need to do action for wisdom upgrades after
 #	setting builders because some builders affect wisdom
 #	upgrades.
-# READING
 	var wisdom_upgrades: Dictionary = Settings.get_wisdom_upgrades()
 	var action: Action = ActionSelectWisdomUpgrades.make(wisdom_upgrades)
+# Question: what is action? what is game client? why game client need to add action?
 	_game_client.add_action(action)
 
 

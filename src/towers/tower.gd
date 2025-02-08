@@ -345,9 +345,11 @@ func _target_is_valid(target) -> bool:
 # element. Note that this overrides projectile's natural color so
 # will need to rework this if we decide to make separate
 # projectile sprites for each element.
+# Creating projectile mechanism
 func _make_projectile(from_pos_base: Vector3, target: Unit) -> Projectile:
 	var z_arc: float = TowerProperties.get_missile_arc(get_id())
 	var from_pos: Vector3 = from_pos_base + Projectile.UNIT_Z_OFFSET
+	# Creating projectile and add target
 	var projectile: Projectile = Projectile.create_linear_interpolation_from_point_to_unit(_default_projectile_type, self, 0, 0, from_pos, target, z_arc, true)
 
 	if _hide_attack_projectiles:

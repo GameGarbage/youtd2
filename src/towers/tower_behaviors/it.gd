@@ -227,7 +227,7 @@ func on_tower_details() -> MultiboardValues:
 
 	return multiboard
 
-
+# Question: what is it kill?
 func it_kill():
 	var mod: float = 0.001 + 0.0001 * tower.get_level()
 

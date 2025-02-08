@@ -14,7 +14,6 @@ var _tutorial_id: int = -1
 
 func set_tutorial_id(tutorial_id: int):
 	_tutorial_id = tutorial_id
-
 	var tutorial_title: String = TutorialProperties.get_title(tutorial_id)
 	var tutorial_text: String = TutorialProperties.get_text(tutorial_id)
 	var text: String = "[color=GOLD]%s[/color]\n \n%s" % [tutorial_title, tutorial_text]

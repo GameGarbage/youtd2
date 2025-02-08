@@ -71,7 +71,7 @@ func start_spawning_wave(wave: Wave):
 #########################
 ###      Private      ###
 #########################
-
+# Creating creep mechanism
 func _spawn_next_creep():
 	var creep_combination: Array[CreepSize.enm] = _current_wave.get_creep_combination()
 	var creep_size: CreepSize.enm = creep_combination[_creep_index]

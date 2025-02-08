@@ -54,6 +54,7 @@ func _ready():
 # NOTE: using _physics_process() because it provides a
 # built-in way to do consistent tickrate, independent of
 # framerate.
+# Physics proccess mechanism
 func _physics_process(_delta: float):
 #	NOTE: depending on _should_tick() return value, client
 #	may tick 0, 1 or multiple times.
