@@ -33,11 +33,13 @@ func _ready():
 #########################
 ###       Public      ###
 #########################
-
+# This function returns the unique identifier (_uid) of the item container.
 func get_uid() -> int:
 	return _uid
 
-
+# This function sets a new capacity for the item container.
+# If the new capacity is less than the current capacity (_capacity), it logs an error and does not change the capacity.
+# If the new capacity is greater than or equal to the current capacity, it updates _capacity and resizes _item_list_with_slots to match the new capacity.
 func set_capacity(new_capacity: int):
 	if new_capacity < _capacity:
 		push_error("Tried to decrease capacity of item container!")
@@ -47,7 +49,9 @@ func set_capacity(new_capacity: int):
 	_capacity = new_capacity
 	_item_list_with_slots.resize(new_capacity)
 
-
+# This function sets a new capacity for the item container.
+# If the new capacity is less than the current capacity (_capacity), it logs an error and does not change the capacity.
+# If the new capacity is greater than or equal to the current capacity, it updates _capacity and resizes _item_list_with_slots to match the new capacity.
 func have_item_space() -> bool:
 	var item_count: int = get_item_count()
 	var result: bool = item_count < _capacity

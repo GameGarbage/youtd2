@@ -284,8 +284,8 @@ func _unhandled_input(event: InputEvent):
 #########################
 ###      Private      ###
 #########################
-#Question: Which function call start_game?
-#Answer: on start button press and timeout will trigger start game
+# Question: Which function call start_game?
+# Answer: on start button press and timeout will trigger start game
 #Reading
 func _start_game():
 	print_verbose("GameScene > _start_game")

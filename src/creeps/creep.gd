@@ -78,7 +78,7 @@ func _ready():
 
 	death.connect(_on_death)
 
-# Moving mechanism
+# Creep moving mechanism
 func update(delta: float):
 	if !is_stunned():
 		_move(delta)
