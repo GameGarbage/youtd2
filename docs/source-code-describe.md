@@ -4,6 +4,72 @@ Sure, here's a step-by-step explanation of the game run flow in the
 
 # game_scene.gd
 
+@export var _game_menu: Control
+Main game menu control node, handles pause menu and game settings
+
+@export var _hud: HUD
+Heads-Up Display, shows game information like resources, wave info, tower info
+
+@export var _map: Map
+Represents the game map/terrain, handles map-related functionality
+
+@export var _ui_canvas_layer: CanvasLayer
+Layer for UI elements, ensures UI renders above game elements
+
+@export var _camera: Camera2D
+Main game camera, handles view movement and zoom
+
+@export var _team_container: TeamContainer
+Manages teams and players, handles team-related logic
+
+@export var _game_start_timer: ManualTimer
+Controls the countdown timer before game starts
+
+@export var _select_point_for_cast: SelectPointForCast
+Handles point-and-click spell casting mechanics
+
+@export var _select_target_for_cast: SelectTargetForCast
+Handles target selection for spells that need specific targets
+
+@export var _move_item: MoveItem
+Controls item movement/dragging functionality
+
+@export var _select_unit: SelectUnit
+Handles unit selection system
+
+@export var _build_tower: BuildTower
+Manages tower construction system
+
+@export var _mouse_state: MouseState
+Tracks mouse interaction states (clicking, dragging, etc.)
+
+@export var _ui_layer: CanvasLayer
+Additional UI layer for overlays and effects
+
+@export var _game_client: GameClient
+Handles client-side game logic and networking
+
+@export var _game_host: GameHost
+Handles host/server-side game logic
+
+@export var _game_time: GameTime
+Manages game time tracking and related functions
+
+@export var _pause_shadow_rect: ColorRect
+Overlay rectangle that darkens screen when game is paused
+
+@export var _object_container: Node2D
+Container for game objects (towers, creeps, etc.)
+
+@export var _build_space: BuildSpace
+Manages buildable areas and tower placement restrictions
+
+@export var _tutorial_menu: TutorialMenu
+Tutorial interface and related controls
+
+@export var _tutorial_controller: TutorialController
+Manages tutorial logic and progression
+
 From analyzing the game_scene.gd file, here's the main game flow:
 
 ## Game Initialization (_ready function):
