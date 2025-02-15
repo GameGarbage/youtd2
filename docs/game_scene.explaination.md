@@ -173,9 +173,9 @@ Three main sections:
 
    UI
 
-## Gameplay Section:
+# Gameplay Section:
 
-Contains game logic controllers:
+## Contains game logic controllers:
 
    GameStartTimer: Controls the countdown before game starts
 

@@ -28,7 +28,7 @@ This file defines a Player class that manages player-related functionality in wh
 
     Gold can be spent on towers
 
-    Knowledge Tomes:
+# Knowledge Tomes:
 
     Used for researching elements
 
