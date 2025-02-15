@@ -229,7 +229,7 @@ Contains visual and physical game elements:
 
 ## UI Section:
 
-User interface elements:
+   User interface elements:
 
    DesaturationFilter: Visual effect filter
 
@@ -255,7 +255,7 @@ User interface elements:
 
 ## Connections:
 
-Signal connections between components:
+   Signal connections between components:
 
    Game start timer timeout
 
@@ -265,19 +265,19 @@ Signal connections between components:
 
    Tutorial menu visibility changes
 
-This scene file represents a complex game structure with:
+# This scene file represents a complex game structure with:
 
-Multiplayer support (evident from player-specific paths and camera positions)
+   Multiplayer support (evident from player-specific paths and camera positions)
 
-Tower defense mechanics (paths, build system)
+   Tower defense mechanics (paths, build system)
 
-Tutorial system
+   Tutorial system
 
-Visual effects
+   Visual effects
 
-Comprehensive UI system
+   Comprehensive UI system
 
-Organized node hierarchy for maintainability
+   Organized node hierarchy for maintainability
 
-The structure suggests this is a multiplayer tower defense game with both ground and air units, multiple players, and a comprehensive tutorial system.
+   The structure suggests this is a multiplayer tower defense game with both ground and air units, multiple players, and a comprehensive tutorial system.
 

@@ -60,7 +60,7 @@ This file defines a Player class that manages player-related functionality in wh
 
     Maximum element level exists
 
-    Builder System:
+# Builder System:
 
     Each player has a builder
 
@@ -68,7 +68,7 @@ This file defines a Player class that manages player-related functionality in wh
 
     Players can select different builders
 
-    Multiplayer Features:
+# Multiplayer Features:
 
     Players can vote ready
 
