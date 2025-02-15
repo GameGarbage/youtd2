@@ -6,15 +6,12 @@ extends Tower
 
 # Create a new script in towers/your_tower_name.gd
 class_name YourTowerName
-
+```
 func _init():
     # Set the tower behavior
     _tower_behavior = YourTowerNameBehavior.new()
+```
 
-Copy
-
-Insert at cursor
-gdscript
 Create a tower behavior script:
 
 # Create in towers/behaviors/your_tower_name_behavior.gd
@@ -59,10 +56,7 @@ func init(tower: Tower, preceding_tower: Tower):
     # Set target count for multishot
     tower.set_target_count(2)
 
-Copy
 
-Insert at cursor
-gdscript
 Update tower properties in the tower properties system:
 
 # In tower_properties.gd or similar configuration file
@@ -90,10 +84,7 @@ func _load_tower_YOUR_ID():
     }
     return stats
 
-Copy
 
-Insert at cursor
-gdscript
 Add tower visual elements:
 
 # In your tower scene
@@ -110,10 +101,7 @@ Add tower visual elements:
 @export var _range_indicator_parent: Node2D
 @export var _sprite_parent: Node2D
 
-Copy
 
-Insert at cursor
-gdscript
 Add special effects or animations if needed:
 
 # In your tower behavior script
@@ -126,12 +114,10 @@ func on_attack(event: Event):
     effect.global_position = _tower.global_position
     _tower.add_child(effect)
 
-Copy
 
-Insert at cursor
-gdscript
+
 Add tower details for the info panel:
-
+```
 func on_tower_details() -> MultiboardValues:
     var values = MultiboardValues.new()
     values.add_value("Damage", str(_tower.get_current_attack_damage_with_bonus()))
@@ -140,14 +126,12 @@ func on_tower_details() -> MultiboardValues:
     # Add any custom stats
     values.add_value("Your Stat", "Value")
     return values
+```
 
-Copy
-
-Insert at cursor
-gdscript
 Register the tower in the game:
 
 # In the appropriate registration system
+```
 func register_towers():
     # Add your tower to the available towers list
     var your_tower = {
@@ -155,12 +139,9 @@ func register_towers():
         "scene": preload("res://scenes/towers/your_tower.tscn")
     }
     _registered_towers[YOUR_TOWER_ID] = your_tower
+```
 
-Copy
-
-Insert at cursor
-gdscript
-Test the tower:
+# Test the tower:
 
 Build the tower in game
 

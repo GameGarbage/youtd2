@@ -21,31 +21,28 @@ func receive_timeslot(timeslot: Array, latency: int):
     var tick_for_this_timeslot: int = _timeslot_tick_queue.back()
     _timeslot_map[tick_for_this_timeslot] = timeslot
 
-Copy
 
-Insert at cursor
-gdscript
 Synchronization System:
 
-Uses timeslots to keep all clients synchronized
+    Uses timeslots to keep all clients synchronized
 
-Clients wait for timeslots from host before proceeding
+    Clients wait for timeslots from host before proceeding
 
-Implements catch-up mechanism if client falls behind
+    Implements catch-up mechanism if client falls behind
 
-Maintains game state consistency through checksums
+    Maintains game state consistency through checksums
 
-Game State Updates:
+    Game State Updates:
 
-Each tick processes:
+    Each tick processes:
 
-Timer updates
+    Timer updates
 
-Creep (enemy) updates
+    Creep (enemy) updates
 
-Projectile updates
+    Projectile updates
 
-Tower updates
+    Tower updates
 
 Action Handling: The game supports multiple action types:
 
@@ -57,10 +54,7 @@ match action_type:
     Action.Type.SELL_TOWER: ActionSellTower.execute(...)
     # ... and many more
 
-Copy
 
-Insert at cursor
-gdscript
 Game Loop:
 
 func _do_tick():
@@ -70,25 +64,22 @@ func _do_tick():
     # 4. Update game state
     # 5. Increment tick counter
 
-Copy
 
-Insert at cursor
-gdscript
 State Verification:
 
-Implements checksum calculation to detect desyncs
+    Implements checksum calculation to detect desyncs
 
-Tracks various game state elements:
+    Tracks various game state elements:
 
-Player damage
+    Player damage
 
-Gold
+    Gold
 
-Tomes
+    Tomes
 
-Lives
+    Lives
 
-Team levels
+    Team levels
 
 Fast-Forward Mechanism:
 
@@ -97,10 +88,7 @@ func _should_tick(ticks_during_this_process: int) -> bool:
     # Handles waiting for timeslots
     # Implements catch-up mechanism if behind
 
-Copy
 
-Insert at cursor
-gdscript
 The system ensures:
 
 All clients stay synchronized
