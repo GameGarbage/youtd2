@@ -2,7 +2,7 @@ This file wave_spawner.gd appears to be written in GDScript (Godot's scripting l
 
 # Core Components:
 
-Wave Management:
+# Wave Management:
 
     The spawner maintains a list of waves ( _wave_list)
 
@@ -21,63 +21,55 @@ Generates all waves at initialization
 
 Each wave contains specific creep combinations, race types, armor types, and special properties
 
-Wave Control:
+# Wave Control:
 
-func start_wave(level: int):
-    var wave: Wave = get_wave(level)
-    wave.state = Wave.State.SPAWNING
-    _current_wave = wave
-    _creep_spawner.start_spawning_wave(wave)
+    func start_wave(level: int):
+        var wave: Wave = get_wave(level)
+        wave.state = Wave.State.SPAWNING
+        _current_wave = wave
+        _creep_spawner.start_spawning_wave(wave)
 
-Copy
+    Controls the spawning of individual waves
 
-Insert at cursor
-gdscript
-Controls the spawning of individual waves
+    Manages wave state transitions
 
-Manages wave state transitions
+    Displays wave information to players
 
-Displays wave information to players
+    Special Features:
 
-Special Features:
+    Supports bonus waves
 
-Supports bonus waves
+    Has a "neverending mode" where it keeps generating additional waves:
 
-Has a "neverending mode" where it keeps generating additional waves:
+    if game_is_neverending:
+        var last_generated_level: int = _wave_list.back().get_level()
+        if distance_to_last_generated_wave < 20:
+            _generate_waves_for(last_generated_level + 1, 20)
 
-if game_is_neverending:
-    var last_generated_level: int = _wave_list.back().get_level()
-    if distance_to_last_generated_wave < 20:
-        _generate_waves_for(last_generated_level + 1, 20)
+# Wave Properties:
 
-Copy
+# Each wave includes:
 
-Insert at cursor
-gdscript
-Wave Properties:
+    Creep combinations
 
-Each wave includes:
+    Race types
 
-Creep combinations
+    Armor types
 
-Race types
+    Special properties
 
-Armor types
+    Health values for different creep sizes
 
-Special properties
+# Communication:
 
-Health values for different creep sizes
+    Uses signals to communicate wave states:
 
-Communication:
+    wave_spawned
 
-Uses signals to communicate wave states:
+    wave_finished
 
-wave_spawned
+    Provides detailed messaging to players about wave composition
 
-wave_finished
+    The system is designed to be flexible and maintainable, with clear separation of concerns between wave generation, management, and spawning. It supports both finite and infinite game modes, and includes detailed logging for debugging purposes.
 
-Provides detailed messaging to players about wave composition
-
-The system is designed to be flexible and maintainable, with clear separation of concerns between wave generation, management, and spawning. It supports both finite and infinite game modes, and includes detailed logging for debugging purposes.
-
-This is typical of a tower defense game where waves of enemies come at regular intervals, with increasing difficulty and variety as the levels progress. The system allows for different enemy types, special properties, and bonus waves to keep the gameplay interesting and challenging.
+    This is typical of a tower defense game where waves of enemies come at regular intervals, with increasing difficulty and variety as the levels progress. The system allows for different enemy types, special properties, and bonus waves to keep the gameplay interesting and challenging.

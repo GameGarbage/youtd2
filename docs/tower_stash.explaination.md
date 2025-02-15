@@ -1,23 +1,15 @@
 This file tower_stash.gd is a GDScript class that manages the available towers a player can build in what appears to be a tower defense game. Let me break down its functionality:
 
-Core Purpose:
+# Core Purpose:
 
 class_name TowerStash extends Node
 
-Copy
-
-Insert at cursor
-gdscript
 This class manages an inventory/stash of towers that are available for the player to build, tracking how many of each tower type the player has access to.
 
-Main Data Structure:
+# Main Data Structure:
 
 var _tower_map: Dictionary = {}
 
-Copy
-
-Insert at cursor
-gdscript
 Uses a dictionary to store tower availability
 
 Keys are tower IDs
@@ -33,10 +25,7 @@ func add_towers(tower_list: Array):
         _tower_map[tower] += 1
     changed.emit()
 
-Copy
 
-Insert at cursor
-gdscript
 Adds towers to the stash
 
 If a tower type doesn't exist, initializes it
@@ -53,10 +42,6 @@ func remove_tower(tower: int):
         _tower_map.erase(tower)
     changed.emit()
 
-Copy
-
-Insert at cursor
-gdscript
 Removes a tower from the stash
 
 Decrements the count
@@ -71,24 +56,17 @@ func has_tower(tower: int) -> bool:
     var count: int = _tower_map[tower]
     return count > 0
 
-Copy
-
-Insert at cursor
-gdscript
 Checks if a specific tower type is available
 
 Returns true if the tower exists and has count > 0
 
-Special Features:
+# Special Features:
 
 func add_all_towers():
     var first_tier_towers: Array = TowerProperties.get_tower_id_list_by_filter(TowerProperties.CsvProperty.TIER, str(1))
     add_towers(first_tier_towers)
 
-Copy
 
-Insert at cursor
-gdscript
 Utility method to add all first-tier towers to the stash
 
 Uses TowerProperties to filter and get tier 1 towers
@@ -97,10 +75,6 @@ Communication:
 
 signal changed()
 
-Copy
-
-Insert at cursor
-gdscript
 Emits a signal whenever the stash contents change
 
 Allows UI or other game systems to update when the available towers change
