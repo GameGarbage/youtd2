@@ -1,17 +1,3 @@
 [remap]
 
-importer="csv_translation"
-type="Translation"
-uid="uid://r7fcn5a2u3ha"
-
-[deps]
-
-files=["res://assets/creeps/orc/normal/metadata.row.translation", "res://assets/creeps/orc/normal/metadata.col.translation", "res://assets/creeps/orc/normal/metadata.sprite.translation", "res://assets/creeps/orc/normal/metadata.offset.translation", "res://assets/creeps/orc/normal/metadata.offset.translation"]
-
-source_file="res://assets/creeps/orc/normal/metadata.csv"
-dest_files=["res://assets/creeps/orc/normal/metadata.row.translation", "res://assets/creeps/orc/normal/metadata.col.translation", "res://assets/creeps/orc/normal/metadata.sprite.translation", "res://assets/creeps/orc/normal/metadata.offset.translation", "res://assets/creeps/orc/normal/metadata.offset.translation"]
-
-[params]
-
-compress=true
-delimiter=0
+importer="keep"

@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dc0yagv13rl10"
+uid="uid://ceyrhdt7hrlvb"
 path="res://.godot/imported/death_N.png-bd4ca58a310659f9b742c10d73cde1ab.ctex"
 metadata={
 "vram_texture": false
@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/death_N.png-bd4ca58a310659f9b742c10d73cde1ab.
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

@@ -1,7 +1,7 @@
 [gd_resource type="TileSet" load_steps=29 format=3 uid="uid://c2ke1gy0rnehu"]
 
-[ext_resource type="Texture2D" uid="uid://b8kaotwoawygm" path="res://assets/tiles/barrels.png" id="12_4re2u"]
-[ext_resource type="Texture2D" uid="uid://c2ui4kf3f3fnc" path="res://assets/tiles/stairs.png" id="18_8rk7a"]
+[ext_resource type="Texture2D" uid="uid://cbnk5ivvqium3" path="res://assets/tiles/barrels.png" id="12_4re2u"]
+[ext_resource type="Texture2D" uid="uid://l752qkpyugae" path="res://assets/tiles/stairs.png" id="18_8rk7a"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_3glom"]
 tile_data = PackedInt32Array(0, 2, 65544, 131074, 2, 65549)
