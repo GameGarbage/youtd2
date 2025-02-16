@@ -105,17 +105,18 @@ Add tower visual elements:
 - Range indicators
 - Mana bar if needed
 3. Set up exports in your tower script:
-
+```
 @export var _mana_bar: ProgressBar
 @export var _tower_selection_area: Area2D
 @export var _visual: Node2D
 @export var _range_indicator_parent: Node2D
 @export var _sprite_parent: Node2D
-
+```
 
 Add special effects or animations if needed:
 
 # In your tower behavior script
+```
 func on_attack(event: Event):
     # Add attack effects
     SFX.sfx_at_unit("res://assets/sfx/your_sound.mp3", _tower)
@@ -124,7 +125,7 @@ func on_attack(event: Event):
     var effect = preload("res://effects/your_effect.tscn").instantiate()
     effect.global_position = _tower.global_position
     _tower.add_child(effect)
-
+```
 
 
 Add tower details for the info panel:
