@@ -15,25 +15,31 @@ func _init():
 Create a tower behavior script:
 
 # Create in towers/behaviors/your_tower_name_behavior.gd
+```
 class_name YourTowerNameBehavior
 extends TowerBehavior
+```
 
 # Define tower properties
+```
 func get_ability_info_list() -> Array[AbilityInfo]:
     var list: Array[AbilityInfo] = []
-    
-    # Add abilities to show in UI
-    var ability1: AbilityInfo = AbilityInfo.new()
-    ability1.name = "Your Ability Name"
-    ability1.icon = "res://resources/icons/your_icon.tres"
-    ability1.description_full = "[color=GOLD]Detailed description[/color]\nof your ability"
-    ability1.description_short = "Short description"
-    ability1.radius = 500 # If ability has range
-    list.append(ability1)
-    
-    return list
+```    
+# Add abilities to show in UI
+```
+var ability1: AbilityInfo = AbilityInfo.new()
+ability1.name = "Your Ability Name"
+ability1.icon = "res://resources/icons/your_icon.tres"
+ability1.description_full = "[color=GOLD]Detailed description[/color]\nof your ability"
+ability1.description_short = "Short description"
+ability1.radius = 500 # If ability has range
+list.append(ability1)
+
+return list
+```
 
 # Define special properties/modifiers
+```
 func get_specials_modifier() -> Modifier:
     var modifier = Modifier.new()
     # Add your tower's special modifications
@@ -41,27 +47,32 @@ func get_specials_modifier() -> Modifier:
     return modifier
 
 # Initialize tower
+```
 func init(tower: Tower, preceding_tower: Tower):
     super.init(tower, preceding_tower)
-    
-    # Set up tower properties
-    tower.set_attack_style_splash({
-        300: 1.0,  # 100% damage within 300 range
-        500: 0.5   # 50% damage within 500 range
-    })
-    
-    # Or for bounce attacks:
-    # tower.set_attack_style_bounce(3, 0.2) # 3 bounces, 20% damage reduction per bounce
-    
-    # Set target count for multishot
-    tower.set_target_count(2)
+```
+# Set up tower properties
+```
+tower.set_attack_style_splash({
+    300: 1.0,  # 100% damage within 300 range
+    500: 0.5   # 50% damage within 500 range
+})
+```
 
+# Or for bounce attacks:
+# tower.set_attack_style_bounce(3, 0.2) # 3 bounces, 20% damage reduction per bounce
+
+# Set target count for multishot
+```
+tower.set_target_count(2)
+```
 
 Update tower properties in the tower properties system:
 
 # In tower_properties.gd or similar configuration file
 
 # Add tower stats
+```
 func _load_tower_YOUR_ID():
     var stats = {
         "name": "Your Tower Name",
@@ -83,17 +94,17 @@ func _load_tower_YOUR_ID():
         "missile_use_lightning_visual": false
     }
     return stats
-
+```
 
 Add tower visual elements:
 
 # In your tower scene
-# 1. Create a new scene that inherits from the base tower scene
-# 2. Add required nodes:
-# - Sprite2D for tower visual
-# - Range indicators
-# - Mana bar if needed
-# 3. Set up exports in your tower script:
+1. Create a new scene that inherits from the base tower scene
+2. Add required nodes:
+- Sprite2D for tower visual
+- Range indicators
+- Mana bar if needed
+3. Set up exports in your tower script:
 
 @export var _mana_bar: ProgressBar
 @export var _tower_selection_area: Area2D

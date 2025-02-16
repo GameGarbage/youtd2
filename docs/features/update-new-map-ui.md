@@ -10,17 +10,17 @@ The map is exported as a variable in the GameScene, which means it's likely conf
 
 # Map Update Process:
 
-    Find the map scene file (likely in res://src/map/ directory)
+Find the map scene file (likely in res://src/map/ directory)
 
-    The map likely consists of:
+The map likely consists of:
 
-    Terrain/background tiles
+Terrain/background tiles
 
-    Buildable cells (used by _build_space)
+Buildable cells (used by _build_space)
 
-    Visual elements
+Visual elements
 
-    Camera origins for player perspectives
+Camera origins for player perspectives
 
 # To modify the map UI:
 
@@ -39,55 +39,55 @@ b. Camera Setup:
     _camera.position = _get_camera_origin_pos()
     ```
 
-    Key Components to Consider:
+Key Components to Consider:
 
-    BuildSpace: Handles where towers can be placed
+BuildSpace: Handles where towers can be placed
 
-    CameraOrigin: Defines starting camera positions for players
+CameraOrigin: Defines starting camera positions for players
 
-    Map Tilemap: The actual visual representation of the map
+Map Tilemap: The actual visual representation of the map
 
-    Practical Steps:
+Practical Steps:
 
-    Open the map scene in the Godot editor
+Open the map scene in the Godot editor
 
-    Modify the tilemap for visual changes
+Modify the tilemap for visual changes
 
-    Update buildable cells markers
+Update buildable cells markers
 
-    Adjust camera origin positions if needed
+Adjust camera origin positions if needed
 
 # Test the changes using the prerender tool:
 
-    The game includes a prerender tool for testing
-    ```
-    if Config.run_prerender_tool():
-        PrerenderTool.run(self, _ui_canvas_layer, _map)
-    ```
+The game includes a prerender tool for testing
+```
+if Config.run_prerender_tool():
+    PrerenderTool.run(self, _ui_canvas_layer, _map)
+```
 
-    Important Considerations:
+Important Considerations:
 
-    Ensure buildable cells are properly marked
+Ensure buildable cells are properly marked
 
-    Maintain proper player spawn points
+Maintain proper player spawn points
 
-    Keep performance in mind when adding visual elements
+Keep performance in mind when adding visual elements
 
-    Test with different screen resolutions
+Test with different screen resolutions
 
-    Verify camera boundaries work correctly
+Verify camera boundaries work correctly
 
 # Testing:
 
-    Use the Config.run_prerender_tool() to verify visual changes
+Use the Config.run_prerender_tool() to verify visual changes
 
-    Test tower placement in all buildable areas
+Test tower placement in all buildable areas
 
-    Verify camera movement and boundaries
+Verify camera movement and boundaries
 
-    Test with different game modes (Build mode vs Random mode)
+Test with different game modes (Build mode vs Random mode)
 
-    Would you like me to elaborate on any of these steps or provide more specific guidance for a particular aspect of the map UI update
+Would you like me to elaborate on any of these steps or provide more specific guidance for a particular aspect of the map UI update
 
 # Based on the map.gd file shown, here's a detailed step-by-step guide to update the map UI:
 
@@ -130,10 +130,10 @@ const BUILDABLE_PULSE_ALPHA_MAX = 0.5
 Update Play Area
 
 # Adjust play area size and position
-# Modify in editor:
-# 1. Select play_area node
-# 2. Adjust CollisionShape2D size
-# 3. Position the play area
+Modify in editor:
+1. Select play_area node
+2. Adjust CollisionShape2D size
+3. Position the play area
 
 Set Camera Boundaries
 
