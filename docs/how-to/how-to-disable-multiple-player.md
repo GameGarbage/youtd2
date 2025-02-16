@@ -11,19 +11,17 @@ Create or modify your project settings (likely in a Config.gd or Settings.gd fil
 class_name Config
 
 # Add this with your other configuration settings
+```
 static func multiplayer_enabled() -> bool:
     # You can store this in project settings or a config file
     # For testing, you can return false directly
     return ProjectSettings.get_setting("game/multiplayer_enabled", false)
+```
 
-Copy
-
-Insert at cursor
-gdscript
 Step 2: Modify the game_scene.gd to use this flag
 
 # In game_scene.gd
-
+```
 func _ready():
     # Add this near the start of _ready()
     if !Config.multiplayer_enabled():
@@ -32,15 +30,12 @@ func _ready():
         Globals.set_team_mode(TeamMode.enm.ONE_PLAYER_PER_TEAM)
 
     # Rest of your _ready() code...
+```
 
-Copy
-
-Insert at cursor
-gdscript
 Step 3: Modify the map selection logic
 
 # In game_scene.gd, modify the map selection part:
-
+```
 func _ready():
     # ... other code ...
 
@@ -56,15 +51,12 @@ func _ready():
         _map = map_big
         _map_small.get_parent().remove_child(_map_small)
         _map_small.queue_free()
+```
 
-Copy
-
-Insert at cursor
-gdscript
 Step 4: Modify the player setup
 
 # In game_scene.gd
-
+```
 func _setup_players():
     var peer_id_list: Array[int] = []
     var local_peer_id: int = multiplayer.get_unique_id()
@@ -83,26 +75,20 @@ func _setup_players():
     var team_count: int = ceili(player_count * 1.0 / player_count_per_team)
 
     # Rest of your team setup code...
+```
 
-Copy
-
-Insert at cursor
-gdscript
 Step 5: Add UI handling for the multiplayer flag
 
 # In your menu or title screen script
-
+```
 func _ready():
     # Disable multiplayer buttons/options if multiplayer is disabled
     if !Config.multiplayer_enabled():
         # Assuming you have multiplayer buttons or options
         $MultiplayerButton.hide()  # or disable
         $TeamSelectOption.hide()   # or disable
+```
 
-Copy
-
-Insert at cursor
-gdscript
 Step 6: Add configuration to Project Settings
 
 Open Project Settings in Godot
@@ -120,18 +106,17 @@ Default value: false
 You can do this in code as well:
 
 # In your game initialization
+```
 func _init():
     if !ProjectSettings.has_setting("game/multiplayer_enabled"):
         ProjectSettings.set_setting("game/multiplayer_enabled", false)
     ProjectSettings.set_initial_value("game/multiplayer_enabled", false)
+```
 
-Copy
-
-Insert at cursor
-gdscript
 Step 7: Optional - Add runtime configuration
 
 # If you want to allow runtime configuration:
+```
 class_name Config
 
 static var _multiplayer_enabled: bool = false
@@ -144,27 +129,22 @@ static func set_multiplayer_enabled(enabled: bool):
 
 static func multiplayer_enabled() -> bool:
     return _multiplayer_enabled
+```
 
-Copy
-
-Insert at cursor
-gdscript
 Usage:
 
 # To disable multiplayer:
 Config.set_multiplayer_enabled(false)
 
 # To check if multiplayer is enabled:
+```
 if Config.multiplayer_enabled():
     # Do multiplayer stuff
 else:
     # Do singleplayer stuff
+```
 
-Copy
-
-Insert at cursor
-gdscript
-This implementation:
+# This implementation:
 
 Makes multiplayer a configurable option
 
@@ -178,7 +158,7 @@ Affects all relevant parts of the game
 
 Maintains the existing code structure while adding the toggle functionality
 
-Remember to:
+# Remember to:
 
 Test thoroughly after implementing these changes
 
