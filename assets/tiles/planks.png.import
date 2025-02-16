@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb3cy5nc11xm4"
+uid="uid://ccudcg7h8i7o6"
 path="res://.godot/imported/planks.png-ce6ddf8ce0b825caa4d788287315e8a6.ctex"
 metadata={
 "vram_texture": false
@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/planks.png-ce6ddf8ce0b825caa4d788287315e8a6.c
 
 [params]
 
-compress/mode=4
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

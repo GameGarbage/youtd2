@@ -1,9 +1,6 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://bo62tf3gtehiu"]
-
-[ext_resource type="Texture2D" uid="uid://2v03j2bnie6o" path="res://assets/tiles/empty_tiles.png" id="1_xb6dd"]
+[gd_resource type="TileSet" load_steps=2 format=3 uid="uid://obbrur70pmp3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cnco2"]
-texture = ExtResource("1_xb6dd")
 texture_region_size = Vector2i(256, 512)
 use_texture_padding = false
 3:0/0 = 0

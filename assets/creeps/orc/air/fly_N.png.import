@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dg22ncv2bbgpl"
+uid="uid://duwu1iee1xtd6"
 path="res://.godot/imported/fly_N.png-d358add11cf12b6bce58a3ac7b09f861.ctex"
 metadata={
 "vram_texture": false
@@ -15,9 +15,9 @@ dest_files=["res://.godot/imported/fly_N.png-d358add11cf12b6bce58a3ac7b09f861.ct
 
 [params]
 
-compress/mode=4
+compress/mode=0
 compress/high_quality=false
-compress/lossy_quality=0.8
+compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0

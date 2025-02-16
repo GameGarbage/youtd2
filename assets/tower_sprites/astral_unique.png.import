@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://df1ouj1h6g583"
+uid="uid://dr80uk5hqrvnk"
 path="res://.godot/imported/astral_unique.png-dbedcfa66d510e70ac21fb049fffc603.ctex"
 metadata={
 "vram_texture": false
@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/astral_unique.png-dbedcfa66d510e70ac21fb049ff
 
 [params]
 
-compress/mode=4
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

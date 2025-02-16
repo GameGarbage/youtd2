@@ -2,7 +2,7 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://d1pnwehsosppo"
+uid="uid://d1ckwt5vf57go"
 path="res://.godot/imported/Friz Quadrata Std Medium.otf-03c51957373724d72743f58a5facb7d4.fontdata"
 
 [deps]
@@ -28,12 +28,7 @@ Fallbacks=null
 fallbacks=[]
 Compress=null
 compress=true
-preload=[{
-"chars": [],
-"glyphs": [],
-"name": "New Configuration",
-"size": Vector2i(16, 0)
-}]
+preload=[]
 language_support={}
 script_support={}
 opentype_features={}

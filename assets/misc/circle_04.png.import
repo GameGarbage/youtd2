@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dx62w7m5jucm5"
+uid="uid://dp6duvmfyk8r3"
 path="res://.godot/imported/circle_04.png-59f4641951225ce02bb76cfd4cec4df6.ctex"
 metadata={
 "vram_texture": false
@@ -15,9 +15,9 @@ dest_files=["res://.godot/imported/circle_04.png-59f4641951225ce02bb76cfd4cec4df
 
 [params]
 
-compress/mode=1
+compress/mode=0
 compress/high_quality=false
-compress/lossy_quality=0.5
+compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0

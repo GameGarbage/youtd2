@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cusqgcgg37fj7" path="res://src/ui/title_screen/lan_match/setup_lan_game.tscn" id="2_2qgi3"]
 [ext_resource type="Theme" uid="uid://bql5sxaowafw3" path="res://resources/theme/wc3_theme.tres" id="2_ec3wj"]
 [ext_resource type="PackedScene" uid="uid://bran1c08eptno" path="res://src/ui/title_screen/online/setup_online_game.tscn" id="3_mias5"]
-[ext_resource type="Texture2D" uid="uid://bpfx0lg44dqkv" path="res://assets/misc/icob_ultra_wide.png" id="3_uvrn4"]
+[ext_resource type="Texture2D" uid="uid://diny3hovr0hak" path="res://assets/misc/icob_ultra_wide.png" id="3_uvrn4"]
 [ext_resource type="PackedScene" uid="uid://bx0xth6bthpon" path="res://src/ui/game_menu/credits_menu.tscn" id="4_rdxi7"]
 [ext_resource type="PackedScene" uid="uid://cnnkyqysqqyar" path="res://src/ui/title_screen/lan_match/lan_connect_menu.tscn" id="5_pc1mj"]
 [ext_resource type="PackedScene" uid="uid://cx86ea3loo8a2" path="res://src/ui/game_menu/settings_menu.tscn" id="5_q0hc3"]

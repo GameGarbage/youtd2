@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgpcu4ck8c2v5"
+uid="uid://dvj2pdebry28k"
 path="res://.godot/imported/stones1.png-ca20d18f9c99f96bf2be2591cff356c6.ctex"
 metadata={
 "vram_texture": false
@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/stones1.png-ca20d18f9c99f96bf2be2591cff356c6.
 
 [params]
 
-compress/mode=4
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
