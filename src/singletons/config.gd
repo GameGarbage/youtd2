@@ -134,3 +134,8 @@ func enable_dev_commands() -> bool:
 
 func print_wave_info() -> bool:
 	return ProjectSettings.get_setting("application/config/print_wave_info") as bool
+
+static func multiplayer_enabled() -> bool:
+	# You can store this in project settings or a config file
+	# For testing, you can return false directly
+	return ProjectSettings.get_setting("game/multiplayer_enabled", false)
