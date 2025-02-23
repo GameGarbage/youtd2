@@ -1,0 +1,1 @@
+update new map UI (water map) by config

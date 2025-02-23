@@ -4,6 +4,7 @@ class_name GameScene extends Node
 @export var _game_menu: Control
 @export var _hud: HUD
 @export var _map_small: Map
+@export var _water_map: Map
 @export var _camera: Camera2D
 @export var _camera_controller: CameraController
 @export var _team_container: TeamContainer
@@ -48,7 +49,7 @@ func _ready():
 	var player_mode: PlayerMode.enm = Globals.get_player_mode()
 	match player_mode:
 		PlayerMode.enm.SINGLEPLAYER:
-			_map = _map_small
+			_map = _water_map
 		PlayerMode.enm.MULTIPLAYER:
 			var map_big_scene: PackedScene = load("res://src/map/map_big.tscn")
 			var map_big: Map = map_big_scene.instantiate()

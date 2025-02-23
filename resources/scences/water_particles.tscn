@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b6ajsy2nr8143"]
+
+[node name="WaterParticles" type="GPUParticles2D"]
+amount = 100
+lifetime = 2.0
+randomness = 0.5
+draw_order = 0

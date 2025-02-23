@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://ccr6p41srpf4p"]
+[gd_scene load_steps=50 format=3 uid="uid://ccr6p41srpf4p"]
 
 [ext_resource type="Script" path="res://src/game_scene/game_scene.gd" id="1_0wd1b"]
 [ext_resource type="Script" path="res://src/game_scene/manual_timer.gd" id="2_gestc"]
@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://db0630tccvc2i" path="res://src/towers/tower_preview.tscn" id="22_53ta1"]
 [ext_resource type="Shader" path="res://resources/shaders/saturation_burn.gdshader" id="23_go3nh"]
 [ext_resource type="Shader" path="res://resources/shaders/foggy_camera.gdshader" id="24_omg4c"]
+[ext_resource type="PackedScene" uid="uid://dpbtf7aatv677" path="res://src/map/map_water/map_water.tscn" id="25_14d0c"]
 [ext_resource type="PackedScene" uid="uid://cngv1rgplre2c" path="res://src/ui/hud/hud.tscn" id="25_m068l"]
 [ext_resource type="PackedScene" uid="uid://4dakdefm73rd" path="res://src/ui/hud/builder_menu.tscn" id="26_2bi2s"]
 [ext_resource type="PackedScene" uid="uid://hiex318b5cvk" path="res://src/ui/game_menu/game_menu.tscn" id="26_xukvx"]
@@ -138,12 +139,13 @@ shader_parameter/vignette_intensity = 0.299
 shader_parameter/vignette_opacity = 0.742
 shader_parameter/vignette_rgb = Color(0, 0, 0.129412, 1)
 
-[node name="GameScene" type="Node" node_paths=PackedStringArray("_game_menu", "_hud", "_map_small", "_camera", "_camera_controller", "_team_container", "_game_start_timer", "_select_point_for_cast", "_select_target_for_cast", "_move_item", "_select_unit", "_build_tower", "_mouse_state", "_game_client", "_game_time", "_pause_shadow_rect", "_shadow_below_builder_menu", "_shadow_above_builder_menu", "_object_container", "_build_space", "_tutorial_menu", "_tutorial_controller", "_builder_menu", "_range_checker")]
+[node name="GameScene" type="Node" node_paths=PackedStringArray("_game_menu", "_hud", "_map_small", "_water_map", "_camera", "_camera_controller", "_team_container", "_game_start_timer", "_select_point_for_cast", "_select_target_for_cast", "_move_item", "_select_unit", "_build_tower", "_mouse_state", "_game_client", "_game_time", "_pause_shadow_rect", "_shadow_below_builder_menu", "_shadow_above_builder_menu", "_object_container", "_build_space", "_tutorial_menu", "_tutorial_controller", "_builder_menu", "_range_checker")]
 process_mode = 3
 script = ExtResource("1_0wd1b")
 _game_menu = NodePath("UI/GameMenu")
 _hud = NodePath("UI/HUD")
 _map_small = NodePath("World/MapSmall")
+_water_map = NodePath("World/WaterMap")
 _camera = NodePath("World/Camera2D")
 _camera_controller = NodePath("Gameplay/CameraController")
 _team_container = NodePath("Gameplay/TeamContainer")
@@ -247,8 +249,6 @@ _hud = NodePath("../../UI/HUD")
 [node name="World" type="Node2D" parent="."]
 process_mode = 1
 y_sort_enabled = true
-
-[node name="MapSmall" parent="World" instance=ExtResource("17_td8cv")]
 
 [node name="PathContainer" type="Node2D" parent="World"]
 z_index = 999
@@ -409,6 +409,11 @@ visible = false
 modulate = Color(1, 1, 1, 0.784314)
 z_index = 100
 _build_space = NodePath("../../Gameplay/BuildSpace")
+
+[node name="WaterMap" parent="World" instance=ExtResource("25_14d0c")]
+
+[node name="MapSmall" parent="World" instance=ExtResource("17_td8cv")]
+visible = false
 
 [node name="UI" type="CanvasLayer" parent="."]
 

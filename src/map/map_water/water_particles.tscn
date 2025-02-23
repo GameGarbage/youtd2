@@ -1,0 +1,9 @@
+[gd_scene format=3]
+
+[node name="WaterParticles" type="GPUParticles2D"]
+emitting = true
+amount = 100
+lifetime = 2.0
+randomness = 0.5
+local_coords = false
+draw_order = 0

@@ -120,4 +120,3 @@ func get_title_screen_notification_list() -> Array[String]:
 
 func clear_title_screen_notification_list():
 	_title_screen_notification_list.clear()
-
