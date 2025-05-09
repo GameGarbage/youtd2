@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d17ej65dobacn"
+uid="uid://bklm0o5yntobc"
 path="res://.godot/imported/fire_uncommon.png-6de277243bef411dac90eeb1e22f5bea.ctex"
 metadata={
 "vram_texture": false
@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/fire_uncommon.png-6de277243bef411dac90eeb1e22
 
 [params]
 
-compress/mode=4
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

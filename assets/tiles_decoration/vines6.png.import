@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wob80clhcyd3"
+uid="uid://bjipb46xatgvj"
 path="res://.godot/imported/vines6.png-62caa287a305152b009b490f3247fe5f.ctex"
 metadata={
 "vram_texture": false
@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/vines6.png-62caa287a305152b009b490f3247fe5f.c
 
 [params]
 
-compress/mode=4
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

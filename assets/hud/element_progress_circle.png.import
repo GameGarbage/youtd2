@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b36lpf5pdifac"
+uid="uid://cwuyrr2klnjnb"
 path="res://.godot/imported/element_progress_circle.png-8d5f0de567ea9d6a868603bbaa0790ee.ctex"
 metadata={
 "vram_texture": false
@@ -30,5 +30,5 @@ process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
-process/size_limit=74
+process/size_limit=0
 detect_3d/compress_to=1

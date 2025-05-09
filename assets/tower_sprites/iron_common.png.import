@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcfvp18syyxci"
+uid="uid://b1cmasqf4qxc1"
 path="res://.godot/imported/iron_common.png-07cffd3ee0ad3a2fa7d81516735529d9.ctex"
 metadata={
 "vram_texture": false
@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/iron_common.png-07cffd3ee0ad3a2fa7d8151673552
 
 [params]
 
-compress/mode=4
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
